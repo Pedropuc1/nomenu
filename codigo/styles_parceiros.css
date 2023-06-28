@@ -1,0 +1,30 @@
+
+
+.fonts {
+
+    font-size: 30px;
+    font-style: normal;
+    orientation: center;
+    margin-bottom: 20px;
+}
+
+@font-face {
+    font-family: "Black Mango SemiBold";
+    src: local("Black Mango SemiBold"), url("/Fonts/Black\ Mango\ SemiBold")
+}
+
+.font_theme {
+    font-family: "Black Mango SemiBold";
+}
+
+.asteristico {
+    font-size: 15px;
+    color: red;
+    display: inline;
+}
+
+#grid-contatos td {
+    word-break: break-all;
+    hyphens: auto;
+    max-width: 200px;
+}

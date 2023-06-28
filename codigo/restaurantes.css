@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  .menu-item {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 16px;
+  }
+  .wrapper-menu{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .menu-list {
+    font: black-mango;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+  .modal-content{
+    background-color: #271e1e;
+    color: #fff;
+  }
