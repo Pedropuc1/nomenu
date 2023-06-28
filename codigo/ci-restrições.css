@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Black Mango SemiBold";
+    src: url("Black\ Mango\ SemiBold.ttf");
+}
+
+.font_theme{
+    font-family: "Black Mango SemiBold";
+}
+
+label {
+    font-weight: bolder;
+}
+::placeholder {
+    color:  #a6aaab !important;
+    opacity: 3;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:  #a6aaab !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:  #a6aaab  !important;
+    opacity:  3;
+ }
+ h1 {
+     text-align: center;
+     padding-top: 50px;
+     color: #FF6f00;
+ }
+ #msg {
+     height: 60px;
+ }
+ #grid-dados tbody {
+     cursor: pointer;
+ }
+ .website-name {
+    text-align: center;
+    color: #FF6f00;
+    font-family: "Black Mango SemiBold";
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <button onclick="mostrarTodos()">Limpar Filtros</button>
+
+<section>
+  <h3>Restrições</h3>
+  <label><input type="checkbox" onchange="filtrarRestricoes()">Intolerância à lactose</label>
+  <label><input type="checkbox" onchange="filtrarRestricoes()">Celíaco</label>
+  <label><input type="checkbox" onchange="filtrarRestricoes()">Diabetes</label>
+  <label><input type="checkbox" onchange="filtrarRestricoes()">Vegetariano</label>
+  <label><input type="checkbox" onchange="filtrarRestricoes()">Vegano</label>
+</section>
+
+<section>
+  <h3>Região</h3>
+    <label><input type="radio" name="regiao" onchange="filtrar()">Belo Horizonte - Sul</label>
+    <label><input type="radio" name="regiao" onchange="filtrar()">Belo Horizonte - Oeste</label>
+    <label><input type="radio" name="regiao" onchange="filtrar()">Contagem</label>
+</section>
+
+<ul id="restaurantes">
+    <li>Restaurante A</li>
+    <li>Restaurante B</li>
+    <li>Restaurante C</li>
+    <li>Restaurante D</li>
+    <li>Restaurante E</li>
+</ul>
+
+<!-- ↓↓↓ JSON E JAVASCRIPT ↓↓↓ -->
+<script>
+    const restaurantes = [
+        {
+            "id": 1,
+            "nome": "Restaurante A",
+            "endereco": "Rua 1, Belo Horizonte",
+            "regiao": "Belo Horizonte - Sul",
+            "restricoes": ["Intolerância à lactose", "Vegetariano"]
+        },
+        {
+            "id": 2,
+            "nome": "Restaurante B",
+            "endereco": "Rua 2, Belo Horizonte",
+            "regiao": "Belo Horizonte - Oeste",
+            "restricoes": ["Diabetes", "Vegano"]
+        },
+        {
+            "id": 3,
+            "nome": "Restaurante C",
+            "endereco": "Rua 3, Contagem",
+            "regiao": "Contagem",
+            "restricoes": ["Celíaco", "Vegetariano"]
+        },
+        {
+            "id": 4,
+            "nome": "Restaurante D",
+            "endereco": "Rua 4, Belo Horizonte",
+            "regiao": "Belo Horizonte - Sul",
+            "restricoes": ["Intolerância à lactose", "Vegano"]
+        },
+        {
+            "id": 5,
+            "nome": "Restaurante E",
+            "endereco": "Rua 5, Belo Horizonte",
+            "regiao": "Belo Horizonte - Oeste",
+            "restricoes": ["Celíaco", "Vegetariano", "Vegano"]
+        },
+    ]
+ 
+    function filtrarRestricoes() {
+        // filtrar somente restrições
+        const restricoes = document.querySelectorAll('input[type=checkbox]:checked');
+        const restricoesSelecionadas = Array.from(restricoes).map(r => r.parentNode.textContent.trim());
+        const regiaoSelecionada = document.querySelector('input[name=regiao]:checked');
+        const regiaoSelecionadaValor = regiaoSelecionada ? regiaoSelecionada.parentNode.textContent.trim() : '';
+
+        const restaurantesFiltrados = restaurantes.filter(restaurante => {
+            return restricoesSelecionadas.every(r => restaurante.restricoes.includes(r)) && (regiaoSelecionadaValor === '' || restaurante.regiao === regiaoSelecionadaValor);
+        });
+
+        const ulRestaurantes = document.getElementById('restaurantes');
+        ulRestaurantes.innerHTML = '';
+        restaurantesFiltrados.forEach(restaurante => {
+            const li = document.createElement('li');
+            li.innerText = restaurante.nome;
+            ulRestaurantes.appendChild(li);
+        });
+
+        }
+
+    function filtrar() {
+        // Pega as restrições selecionadas 
+        const restricoes = document.querySelectorAll('input[type=checkbox]:checked');
+        const restricoesSelecionadas = Array.from(restricoes).map(r => r.parentNode.textContent.trim());
+       
+        // Pega a região selecionada 
+        const regiaoSelecionada = document.querySelector('input[name=regiao]:checked').parentNode.textContent.trim();
+        
+
+        // Filtra a lista de restaurantes 
+        const restaurantesFiltrados = restaurantes.filter(restaurante => {
+            const atendeRestricoes = restricoesSelecionadas.every(r => restaurante.restricoes.includes(r));
+            const naRegiaoSelecionada = restaurante.regiao === regiaoSelecionada;
+            return atendeRestricoes && naRegiaoSelecionada;
+        });
+
+        // Atualiza a lista de restaurantes mostrada na página
+        const listaRestaurantes = document.getElementById('restaurantes');
+        listaRestaurantes.innerHTML = '';
+        restaurantesFiltrados.forEach(restaurante => {
+            const item = document.createElement('li');
+            item.textContent = restaurante.nome;
+            listaRestaurantes.appendChild(item);
+        });
+    }
+
+    function mostrarTodos() {
+        const listaRestaurantes = document.getElementById('restaurantes');
+        listaRestaurantes.innerHTML = '';
+        restaurantes.forEach(restaurante => {
+            const item = document.createElement('li');
+            item.textContent = restaurante.nome;
+            listaRestaurantes.appendChild(item);
+            // Desmarca todas as checkboxes
+        const checkboxes = document.querySelectorAll('input[type=checkbox]');
+        checkboxes.forEach(checkbox => checkbox.checked = false);
+
+        // Desmarca todos os radios
+        const radios = document.querySelectorAll('input[type=radio]');
+        radios.forEach(radio => radio.checked = false);
+
+        });
+    }
+    
+    
+</script>
+
+</body>
+
+</html>

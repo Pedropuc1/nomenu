@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoMenu Alergia à Proteina do Leite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Comentario.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg header_style">
+            <div class="container-fluid">
+                <div class="logo_NoMenu">
+                    <a class="navbar-brand font_logo color_theme fs-1" href="home.html"><b>NoMenu</b></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse cabecalho" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link color_theme" href="home.html"><b>Home</b></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link color_theme" href="#"><b>Restaurantes</b></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle color_theme" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <b>Restrições Alimentares</b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="AlergiaAProteinaDoLeite.html">Alergia a Proteína
+                                        do Leite de Vaca</a></li>
+                                <li><a class="dropdown-item" href="DoencaCeliaca.html">Doença Celíaca</a></li>
+                                <li><a class="dropdown-item" href="IntoleranciaAGluten.html">Intolerância ao glúten</a>
+                                </li>
+                                <li><a class="dropdown-item" href="IntoleranciaALactose.html">Intolerância a Lactose</a>
+                                </li>
+                                <li><a class="dropdown-item" href="Veganismo.html">Veganismo</a></li>
+                                <li><a class="dropdown-item" href="Vegetarianismo.html">Vegetarianismo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link color_theme" href="#"><b>Parceiros</b></a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link color_theme" href="#"><b>Login</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <h3 class="color_theme text-center nome-restricao">Página de Comentários</h3>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <p class="text">
+                        Bem-vindo à página de comentários! Queremos ouvir sua opinião e feedback sobre nossa plataforma.
+                        Sua opinião é valiosa para nós e nos ajuda a melhorar continuamente a experiência dos nossos
+                        usuários.
+                    </p>
+                    <p class="text">
+                        Sinta-se à vontade para compartilhar seus pensamentos, sugestões, críticas construtivas ou
+                        qualquer outra coisa que desejar. Queremos saber o que você gosta e o que podemos fazer para
+                        tornar sua experiência ainda melhor.
+                    </p>
+                    <p class="text">
+                        Por favor, mantenha as seguintes diretrizes ao deixar um comentário:
+                    </p>
+                    <p class="text">
+                        1. Seja respeitoso: respeite os outros usuários e evite qualquer forma de discurso de ódio,
+                        linguagem ofensiva ou conteúdo inapropriado.
+                    </p>
+                    <p class="text">
+                        2. Seja construtivo: forneça feedback útil e construtivo que possa nos ajudar a entender suas
+                        necessidades e expectativas.
+                    </p>
+                    <p class="text">
+                        3. Seja específico: ao fornecer feedback ou fazer uma pergunta, tente ser o mais específico
+                        possível para que possamos entender claramente o que você está falando.
+                    </p>
+                    <p class="text">
+                        Estamos ansiosos para ler seus comentários e responder a todas as suas perguntas. Obrigado por
+                        fazer parte da nossa comunidade e por nos ajudar a melhorar!
+                    </p>
+                    <p class="text">
+                        Equipe NoMenu.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Comment Section -->
+        <div class="bg_color_nomenu-orange container round_edges_15px avaliacao">
+            <h3 class="text-white fw-bold">Avaliações</h3>
+            <div id="tela_estrela" class = "estrelas_media fs-4"></div>
+            <button type="button" class="btn bg-white color_text margin-10px round_edges_10px" id="btnCarregaDados"><b>Carrega Comentário</b></button>
+            <div id="tela"></div>
+
+            <div class="row linha1">
+                <div class="col-lg-2 col-md-3 col-sm-5">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn bg-white color_text margin-10px round_edges_10px" id ="AdicionarComentario"
+                        data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <b>Adicionar Comentário</b>
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog round_edges_15px">
+                            <div class="modal-content">
+                                <div class="modal-header bg_color_nomenu-orange">
+                                    <h1 class="modal-title fs-5 text-white" id="staticBackdropLabel">Novo Comentário
+                                    </h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id = "formComentario">
+                                        <div class="mb-3">
+                                            <p>Nome:</p>
+                                            <input type="Nome" class="form-control" id="NomeComentario">
+                                        </div>
+                                        <div class="mb-3 nota">
+                                            <p>Avaliação:</p>
+                                            <div class="star-evaluation">
+                                                <div class="center-star">
+                                                    <fieldset class="rating">
+                                                        <input type="radio" id="star5" name="rating" value="5" class = "estrela">
+                                                        <label for="star5" class="full"></label>
+                                                        <input type="radio" id="star4.5" name="rating" value="4.5" class = "estrela">
+                                                        <label for="star4.5" class="half"></label>
+                                                        <input type="radio" id="star4" name="rating" value="4" class = "estrela">
+                                                        <label for="star4" class="full"></label>
+                                                        <input type="radio" id="star3.5" name="rating" value="3.5" class = "estrela">
+                                                        <label for="star3.5" class="half"></label>
+                                                        <input type="radio" id="star3" name="rating" value="3" class = "estrela">
+                                                        <label for="star3" class="full"></label>
+                                                        <input type="radio" id="star2.5" name="rating" value="2.5" class = "estrela">
+                                                        <label for="star2.5" class="half""></label>
+                                                        <input type=" radio" id="star2" name="rating" value="2" class = "estrela">
+                                                        <label for="star2" class="full"></label>
+                                                        <input type="radio" id="star1.5" name="rating" value="1.5" class = "estrela">
+                                                        <label for="star1.5" class="half"></label>
+                                                        <input type="radio" id="star1" name="rating" value="1" class = "estrela">
+                                                        <label for="star1" class="full"></label>
+                                                        <input type="radio" id="star0.5" name="rating" value="0.5" class = "estrela">
+                                                        <label for="star0.5" class="half"></label>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <p>Comentário:</p>
+                                            <div class="input-group">
+                                             <input id="Comentario" class="form-control" aria-label="With textarea"></input>
+                                            </div>
+                                        </div>
+                                        <button type="submit"
+                                            class="btn bg_color_nomenu-orange text-white" id = "EnviarComentario">Enviar</button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer bg_color_nomenu-orange">
+                                    <button type="button" class="btn bg-white color_text"
+                                        data-bs-dismiss="modal"><b>Cancelar</b></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="color_theme footer_style">
+        <div class="row">
+            <div class="col-lg-9 col-md-12 col-sm-12">
+                <p class="font_logo color_theme fs-2"><b>NoMenu</b></p>
+            </div>
+            <div class="col-lg-3 col-md-12 col-sm-12 social_icons">
+                <i class="fa fa-instagram fs-5  margin_icons" aria-hidden="true"></i>
+                <i class="fa fa-youtube-play fs-5 margin_icons" aria-hidden="true"></i>
+                <i class="fa fa-facebook-official fs-5 margin_icons" aria-hidden="true"></i>
+                <i class="fa fa-envelope fs-5 margin_icons" aria-hidden="true"></i>
+                <i class="fa fa-twitter-square fs-5 margin_icons" aria-hidden="true"></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12 footer_text">
+                <h6 class="footer_h">Sobre nós</h6>
+                <p class="footer_text text-body-tertiary">
+                    Bem-vindo ao nosso site dedicado a ajudar você a encontrar restaurantes que atendam às suas
+                    restrições alimentares específicas! <br>
+                    <a href="SobreNos.html" class="color_theme">Clique aqui para saber mais sobre nós!</a>
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 footer_text">
+                <h6 class="footer_h">Restaurantes</h6>
+                <p class="footer_text text-body-tertiary">
+                    Nossos restaurantes passam por um processo cuidadoso de seleção e verificação para garantir
+                    correto atendimento das restrições!
+                </p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 footer_text ">
+                <h6 class="footer_h">Restrições Alimentares</h6>
+                <a href="AlergiaAProteinaDoLeite.html" class="text-body-tertiary link_decoration footer_h">Alergia a
+                    Proteína do Leite</a><br>
+                <a href="DoencaCeliaca.html" class="text-body-tertiary link_decoration footer_h">Doença Celíaca</a><br>
+                <a href="IntoleranciaAGluten.html" class="text-body-tertiary link_decoration footer_h">Intolerância ao
+                    glúten</a><br>
+                <a href="IntoleranciaALactose.html" class="text-body-tertiary link_decoration footer_h">Intolerância a
+                    Lactose</a><br>
+                <a href="Veganismo.html" class="text-body-tertiary link_decoration footer_h">Veganismo</a><br>
+                <a href="Vegetarianismo.html" class="text-body-tertiary link_decoration footer_h">Vegetarianismo</a><br>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 footer_text">
+                <h6 class="footer_h">Parceiros</h6>
+                <p class="footer_text text-body-tertiary">
+                    Nossos parceiros desempenham um papel fundamental em fornecer suporte e recursos para o nosso
+                    site de restaurantes que atendem restrições alimentares. Trabalhamos em parceria com
+                    associações, restaurantes e parceiros tecnológicos para garantir uma experiência abrangente e
+                    confiável aos nossos usuários.<br>
+                    <a href="parceiros.html" class="color_theme">Clique aqui para ir para a página de parceiros!</a>
+                </p>
+
+            </div>
+        </div>
+        <div class="row">
+            <p class="color_background text-white text-center reserved_rights">© 2023 NoMenu. Todos os direitos
+                reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

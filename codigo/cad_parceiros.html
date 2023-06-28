@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro de parceiros</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link href="styles_parceiros.css" rel="stylesheet">
+  <link href="padronizacao.css" rel="stylesheet">
+</head>
+
+<body onload="init()">
+  <header>
+    <nav class="navbar navbar-expand-lg header_style fixed-top bg-white">
+      <div class="container-fluid">
+        <div class="logo_NoMenu">
+          <a class="navbar-brand font_logo color_theme fs-1" href="#"><b>NoMenu</b></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse cabecalho" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link color_theme" href="home.html"><b>Home</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link color_theme" href="restaurantes.html"><b>Restaurantes</b></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle color_theme" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <b>Restrições Alimentares</b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="AlergiaAProteinaDoLeite.html">Alergia a Proteína do Leite</a></li>
+                <li><a class="dropdown-item" href="DoencaCeliaca.html">Doença Celíaca</a></li>
+                <li><a class="dropdown-item" href="IntoleranciaAGluten.html">Intolerância ao glúten</a></li>
+                <li><a class="dropdown-item" href="IntoleranciaALactose.html">Intolerância a Lactose</a></li>
+                <li><a class="dropdown-item" href="Veganismo.html">Veganismo</a></li>
+                <li><a class="dropdown-item" href="Vegetarianismo.html">Vegetarianismo</a></li>
+              </ul>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link color_theme" href="parceiros.html"><b>Parceiros</b></a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link color_theme" href="pg_cadastro.html"><b>Login</b></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container font_theme ">
+      <div class="row">
+        <div class="rol-lg-12">
+          <div class="d-flex" style="justify-content: center;">
+            <h1 class="fonts" style="margin-top: 10px;margin-bottom: 10px;">Cadastro de parceiros:</h1>
+          </div>
+          <h2>Cadastro</h2>
+          <h2 class="fonts" style="font-size: 15px;display: inline;">TODOS OS CAMPOS SÃO OBRIGATORIOS</h2>
+          <span class="asteristico">*</span>
+
+          <form id="form-contato" class="row g-3 needs-validation">
+
+            <div class="col-md-2">
+              <label for="inputId">Id</label>
+              <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
+            </div>
+            <div class="col-md-12">
+              <label for="inputNome">Nome da empresa (*)</label>
+              <input type="text" class="form-control" id="inputNome" required placeholder="Informe o nome da empresa">
+            </div>
+            <div class="col-md-12">
+              <label for="inputEmail">E-mail (*)</label>
+              <input type="email" class="form-control" id="inputEmail" required placeholder="Informe o e-mail">
+            </div>
+
+            <div class="col-md-4">
+              <label for="inputCnpj">Cnpj</label>
+              <input type="text" class="form-control" id="inputCnpj" placeholder="Informe o cnpj da empresa">
+            </div>
+
+            <div class="col-md-4">
+              <label for="inputCidade">Cidade</label>
+              <input type="text" class="form-control" id="inputCidade" placeholder="Informe a cidade do parceiro">
+            </div>
+            <div class="col-md-4">
+              <label for="inputCep">CEP</label>
+              <input type="text" class="form-control" id="inputCep" placeholder="Informe o CEP">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCategoria">Categoria</label>
+              <input type="text" class="form-control" id="inputCategoria" required
+                placeholder="Informe a categoria do parceiro">
+            </div>
+
+            <div class="col-md-6">
+              <label for="inputTelefone">Telefone (*)</label>
+              <input type="text" class="form-control" id="inputTelefone" required placeholder="Telefone">
+            </div>
+            <div class="col-md-12">
+              <label for="inputSite">Web Site (*)</label>
+              <input type="text" class="form-control" id="inputSite" required placeholder="Web Site">
+            </div>
+            <div class="col-md-12">
+              <label for="inputLogo">Link da Logo (*)</label>
+              <input type="text" class="form-control" id="inputLogo" required placeholder="Link da logo">
+            </div>
+            <div class="col-md-12">
+              <label for="inputDescricao">Descrição (*)</label>
+              <textarea class="form-control" placeholder="Escreva a descrição da empresa"
+                id="inputDescricao"></textarea>
+            </div>
+
+            <div class="form-group row">
+              <div class="col-md-4">
+                <small>(*) Campos obrigatórios</small>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn-success" id="btnInsert">SALVAR</button>
+            </div>
+
+            <div class="col-md-3">
+              <button class="btn btn-primary" id="btnUpdate">EDITAR</button>
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn-danger" id="btnDelete">EXCLUIR</button>
+            </div>
+            <div class="col-md-3">
+              <button class="btn" id="btnClear" style="background-color: rgb(112, 108, 108);">LIMPAR</button>
+            </div>
+
+          </form>
+          <!-- AQUI SERÁ ADICIONADO A TABELA DE PARCEIROS-->
+          <div class="table-responsive">
+            <table id="grid-contatos" class="table table-striped table-hover md-12">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nome</th>
+                  <th scope="col">Cnpj</th>
+                  <th scope="col">Telefone</th>
+                  <th scope="col">E-mail</th>
+                  <th scope="col">Cidade</th>
+                  <th scope="col">CEP</th>
+                  <th scope="col">Categoria</th>
+                  <th scope="col">Site</th>
+                  <th scope="col">LinkLogo</th>
+                  <th scope="col">Descrição</th>
+                  <th scope="col">Logo</th>
+                </tr>
+              </thead>
+              <tbody id="table-contatos" class="md-12" style="vertical-align: middle;">
+                <tr>
+                  <td scope="row">1</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><img src="" alt="Logo"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+  </main>
+  <footer class="color_theme footer_style">
+    <div class="row">
+      <div class="col-lg-9 col-md-12 col-sm-12">
+        <p class="font_logo color_theme fs-2"><b>NoMenu</b></p>
+      </div>
+      <div class="col-lg-3 col-md-12 col-sm-12 social_icons">
+        <i class="fa fa-instagram fs-5  margin_icons" aria-hidden="true"></i>
+        <i class="fa fa-youtube-play fs-5 margin_icons" aria-hidden="true"></i>
+        <i class="fa fa-facebook-official fs-5 margin_icons" aria-hidden="true"></i>
+        <i class="fa fa-envelope fs-5 margin_icons" aria-hidden="true"></i>
+        <i class="fa fa-twitter-square fs-5 margin_icons" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12 footer_text">
+        <h6 class="footer_h">Sobre nós</h6>
+        <p class="footer_text text-body-tertiary">
+          Bem-vindo ao nosso site dedicado a ajudar você a encontrar restaurantes que atendam às suas restrições
+          alimentares específicas! <br>
+          <a href="" class="color_theme">Clique aqui para saber mais sobre nós!</a>
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 footer_text">
+        <h6 class="footer_h">Restaurantes</h6>
+        <p class="footer_text text-body-tertiary">
+          Nossos restaurantes passam por um processo cuidadoso de seleção e verificação para garantir correto
+          atendimento das restrições!
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 footer_text ">
+        <h6 class="footer_h">Restrições Alimentares</h6>
+        <a href="AlergiaAProteinaDoLeite.html" class="text-body-tertiary link_decoration footer_h">Alergia à Proteína do
+          Leite de Vaca</a><br>
+        <a href="DoencaCeliaca.html" class="text-body-tertiary link_decoration footer_h">Doença Celíaca</a><br>
+        <a href="IntoleranciaAGluten.html" class="text-body-tertiary link_decoration footer_h">Intolerância ao
+          glúten</a><br>
+        <a href="" class="text-body-tertiary link_decoration footer_h">Intolerância a Lactose</a><br>
+        <a href="" class="text-body-tertiary link_decoration footer_h">Veganismo</a><br>
+        <a href="" class="text-body-tertiary link_decoration footer_h">Vegetarianismo</a><br>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 footer_text">
+        <h6 class="footer_h">Parceiros</h6>
+        <p class="footer_text text-body-tertiary">
+          Nossos parceiros desempenham um papel fundamental em fornecer suporte e recursos para o nosso site de
+          restaurantes que atendem restrições alimentares. Trabalhamos em parceria com associações, restaurantes e
+          parceiros tecnológicos para garantir uma experiência abrangente e confiável aos nossos usuários.<br>
+          <a href="parceiros.html" class="color_theme">Clique aqui para ir para a página de parceiros!</a>
+        </p>
+
+      </div>
+    </div>
+    <div class="row">
+      <p class="color_background text-white text-center reserved_rights">© 2023 NoMenu. Todos os direitos reservados.
+      </p>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/559e095fe9.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="tabela_parceiros.js"></script>
+  <script>
+    function exibeContatos() {
+      $("#table-contatos").html("");
+
+      for (i = 0; i < db.data.length; i++) {
+        let parceiro = db.data[i];
+        $("#table-contatos").append(`<tr><td scope="row">${parceiro.id}</td>
+                    
+                                                <td>${parceiro.nome}</td>
+                                                <td>${parceiro.cnpj}</td>
+                                                <td>${parceiro.telefone}</td>
+                                                <td>${parceiro.email}</td>
+                                                <td>${parceiro.cidade}</td>
+                                                <td>${parceiro.cep}</td>
+                                                <td>${parceiro.categoria}</td>
+                                                <td>${parceiro.website}</td>
+                                                <td>${parceiro.logo}</td>
+                                                <td>${parceiro.descricao}</td>
+                                                <td><img src="${parceiro.logo}" alt="Logo" width="120px"></td>
+
+                                            </tr>`);
+      }
+    }
+
+    function init() {
+      $("#btnInsert").click(function () {
+        if (!$('#form-contato')[0].checkValidity()) {
+          displayMessage("Preencha o formulário corretamente.");
+          return;
+        }
+
+        let campoNome = $("#inputNome").val();
+        let campoTelefone = $("#inputTelefone").val();
+        let campoCnpj = $("#inputCnpj").val();
+        let campoEmail = $('#inputEmail').val();
+        let campoCidade = $("#inputCidade").val();
+        let campoCep = $('#inputCep').val();
+        let campoCategoria = $('#inputCategoria').val();
+        let campoSite = $('#inputSite').val();
+        let campoLogo = $('#inputLogo').val();
+        let campoDescricao = $('#inputDescricao').val();
+        let parceiro = {
+          nome: campoNome,
+          telefone: campoTelefone,
+          cnpj: campoCnpj,
+          email: campoEmail,
+          cidade: campoCidade,
+          cep: campoCep,
+          categoria: campoCategoria,
+          website: campoSite,
+          logo: campoLogo,
+          descricao: campoDescricao
+        };
+
+        insertContato(parceiro);
+
+        exibeContatos();
+
+        $("#form-contato")[0].reset();
+      });
+
+      $("#btnUpdate").click(function () {
+        let campoId = $("#inputId").val();
+        if (campoId == "") {
+          displayMessage("Selecione um contato para ser alterado.");
+          return;
+        }
+        let campoNome = $("#inputNome").val();
+        let campoTelefone = $("#inputTelefone").val();
+        let campoCnpj = $("#inputCnpj").val();
+        let campoEmail = $("#inputEmail").val();
+        let campoCidade = $("#inputCidade").val();
+        let campoCep = $("#inputCep").val();
+        let campoCategoria = $("#inputCategoria").val();
+        let campoSite = $('#inputSite').val();
+        let campoLogo = $('#inputLogo').val();
+        let campoDescricao = $('#inputDescricao').val();
+        let parceiro = {
+          nome: campoNome,
+          telefone: campoTelefone,
+          cnpj: campoCnpj,
+          email: campoEmail,
+          cidade: campoCidade,
+          cep: campoCep,
+          categoria: campoCategoria,
+          website: campoSite,
+          logo: campoLogo,
+          descricao: campoDescricao
+        };
+
+        updateContato(parseInt(campoId), parceiro);
+
+        exibeContatos();
+
+        $("#form-contato")[0].reset();
+      });
+
+      $("#btnDelete").click(function () {
+        let campoId = $("#inputId").val();
+        if (campoId == "") {
+          displayMessage("Selecione um contato a ser excluído.");
+          return;
+        }
+        deleteContato(parseInt(campoId));
+
+        exibeContatos();
+
+        $("#form-contato")[0].reset();
+      });
+
+      $("#btnClear").click(function () {
+        $("#form-contato")[0].reset();
+      });
+
+
+      $('#msg').bind("DOMSubtreeModified", function () {
+        window.setTimeout(function () {
+          $(".alert").fadeTo(500, 0).slideUp(500, function () {
+            $(this).remove();
+          });
+        }, 5000);
+      });
+
+
+      $("#grid-contatos").on("click", "tr", function (e) {
+        let linhaContato = this;
+        colunas = linhaContato.querySelectorAll("td");
+
+        $("#inputId").val(colunas[0].innerText);
+        $("#inputNome").val(colunas[1].innerText);
+        $("#inputCnpj").val(colunas[2].innerText);
+        $("#inputTelefone").val(colunas[3].innerText);
+        $("#inputEmail").val(colunas[4].innerText);
+        $("#inputCidade").val(colunas[5].innerText);
+        $("#inputCep").val(colunas[6].innerText);
+        $("#inputCategoria").val(colunas[7].innerText);
+        $("#inputSite").val(colunas[8].innerText);
+        $("#inputLogo").val(colunas[9].innerText);
+        $("#inputDescricao").val(colunas[10].innerText);
+      });
+
+      exibeContatos();
+    }
+  </script>
+
+</body>
+
+</html>

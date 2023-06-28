@@ -1,0 +1,70 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  header {
+    background-color: #271e1e;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  
+  .menu-item {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 16px;
+  }
+  
+  .wrapper-menu {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .menu-list {
+    font: black-mango;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  
+  .divs{
+    margin-top: 125px;
+    margin-bottom: 125px;
+  }
+
+  .card {
+    border-width: 1px;
+    border-color: #ff48164f;
+    margin: 20px;
+    box-shadow: #ff48164f 12px 12px 12px;
+    background-color: #ffffff;
+    color: #ff4716;
+  }
+  .card-body{
+    text-align: center;
+  }
+  
+  h5 {
+    text-align: center;
+  }
+  
+  .card-text {
+    text-align: center;
+  }
+
+  .btn {
+    color: #ffffff;
+    background-color: #ff4716;
+ }
+  

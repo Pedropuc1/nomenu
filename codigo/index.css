@@ -1,0 +1,113 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+@font-face {
+    font-family: "Black Mango SemiBold";
+    src: local("Black Mango SemiBold"), url("C:\Users\morei\Documents\ENG DE SOFTWARE 2023.1\DIW\NoMenu\Black Mango SemiBold")
+}
+
+.font_theme{
+    font-family: "Black Mango SemiBold";
+}
+
+.color_text{
+    color: #FF6f00;
+}
+
+.bg_color_nomenu-orange{
+    background-color: #FF914D;
+}
+
+.round_edges_15px{
+    border-radius: 15px;
+}
+
+.round_edges_10px{
+    border-radius: 10px;
+}
+
+.margin-10px{
+    margin: 10px;
+}
+
+.star-evaluation{
+    display: flex;
+}
+
+.center-star{
+    width: auto;
+    margin: auto; 
+}
+
+#rating_value{
+    margin: 40px auto 0;
+    width: 110px;
+    padding:  10px 5px;
+    text-align: center;
+}
+
+.rating{
+    border: none;
+    float: left;
+}
+
+.rating > input{
+    display: none;
+}
+
+.rating > label:before{
+    content: '\f005';
+    font-family: FontAwesome;
+    margin: 5px;
+    font-size: 1.5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.rating > .half:before{
+    content: '\f089';
+    position: absolute;
+    cursor: pointer;
+}
+
+.rating > label{
+    color: lightgrey;
+    float: right;
+    cursor: pointer;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label{
+    color: yellow;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ input:hover ~ label{
+    color: yellow;
+}
+
+.linha1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+#tela {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    row-gap: 16px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 20px;
+  
+}
+
+.estrelas_media{
+    color: yellow;
+}

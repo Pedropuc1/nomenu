@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cadastro de cardapio</title>
+  <link href="cad_cardapio.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="botoes-cadastro">
+    <button id="btnCadastroPratos">Cadastrar Pratos</button>
+  </div>
+
+  <div id="popup">
+    <div id="popup-content">
+      <h2>Cadastrar Pratos</h2>
+      <input type="text" id="nomePrato" placeholder="Nome do Prato">
+      <textarea id="descricaoPrato" placeholder="Descrição do Prato"></textarea>
+      <textarea id="ingredientesPrato" placeholder="Ingredientes do Prato"></textarea>
+      <textarea id="restricoesPrato" placeholder="Restrições Alimentares"></textarea>
+      <div class="botoes-popup">
+        <button onclick="adicionarPrato()">Adicionar Prato</button>
+        <button onclick="salvarPratos()">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="pratosContainer" class="pratos-container"></div>
+
+  <script src="cad_cardapio.js"></script>
+</body>
+
+</html>
