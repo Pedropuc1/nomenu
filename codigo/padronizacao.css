@@ -1,0 +1,86 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css);
+
+@font-face {
+    font-family: "Black Mango SemiBold";
+    src: local("Black Mango SemiBold"), url("C:\Users\morei\Documents\ENG DE SOFTWARE 2023.1\DIW\NoMenu\Black Mango SemiBold")
+}
+
+.font_logo {
+    font-family: "Black Mango SemiBold";
+    padding-left: 16px;
+}
+
+.color_theme {
+    color: #ff4716;
+}
+
+.color_background {
+    background-color: #ff4716;
+}
+
+header {
+    font-family: "TT Commons", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+main {
+    font-family: "TT Commons", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.header_style {
+    padding: 0px 20px 0px 0px;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.footer_style {
+    padding: 0px;
+    margin-top: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.margin_icons {
+    margin: 8px;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.social_icons {
+    display: flex;
+    justify-content: right;
+}
+
+.footer_text {
+    font-size: small;
+    text-align: justify;
+    padding: 0px 15px;
+    margin-top: 5px;
+}
+
+.footer_h {
+    padding: 0px 15px;
+}
+
+.reserved_rights {
+    font-size: 70%;
+    border-radius: 5px;
+}
+
+.link_decoration {
+    text-decoration: none;
+}
+
+.nome-restricao {
+    margin: 15px;
+}
+
+.descricao_restricao{
+    margin: 0px 35px 8px 35px;
+    padding: 0px 30px 8px 30px;
+    text-align: justify ;
+}
